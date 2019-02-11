@@ -1,0 +1,20 @@
+[user]
+	name = mattdean1
+	email = mail@mattdean.io
+[credential]
+	helper = osxkeychain
+[alias]
+	st = status
+	co = checkout
+	br = branch
+	ci = commit
+	ap = add -p
+	cm = commit -m
+	fixup = commit --amend --no-edit
+        cm = commit --message
+        cia = commit --amend
+        rc = rebase --continue
+        ra = rebase --abort
+        rh = reset --hard	
+[core]
+	pager = diff-so-fancy | less --tabs=4 -RFX
