@@ -1,13 +1,16 @@
 [user]
 	name = mattdean1
-	email = mail@mattdean.io
+	email = matt.dean.001@gmail.com
 [credential]
 	helper = osxkeychain
 [alias]
+	l = log
+	p = pull
 	st = status
 	co = checkout
 	br = branch
 	ci = commit
+	cp = cherry-pick
 	ap = add -p
 	cm = commit -m
 	fixup = commit --amend --no-edit
@@ -16,5 +19,18 @@
         rc = rebase --continue
         ra = rebase --abort
         rh = reset --hard	
+	start = !git checkout master && git pull
+	pro = pull --rebase origin master
+	pr = "!f(){ \
+	    hub pull-request -m \"$1\" -h `git rev-parse --abbrev-ref HEAD` -b master -l \"MASTER\"; \
+	    }; f"
+ 
+	ipr = "!f(){ \
+	    hub pull-request -m \"$1\" -h `git rev-parse --abbrev-ref HEAD` -b master -l \"MASTER\"; \
+	    hub pull-request -m \"$1\" -h `git rev-parse --abbrev-ref HEAD` -b staging -l \"STAGING\"; \
+	    }; f"
+
+[push]
+	default = current
 [core]
 	pager = diff-so-fancy | less --tabs=4 -RFX
