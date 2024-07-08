@@ -19,16 +19,7 @@
         rc = rebase --continue
         ra = rebase --abort
         rh = reset --hard	
-	start = !git checkout master && git pull
-	pro = pull --rebase origin master
-	pr = "!f(){ \
-	    hub pull-request -m \"$1\" -h `git rev-parse --abbrev-ref HEAD` -b master -l \"MASTER\"; \
-	    }; f"
- 
-	ipr = "!f(){ \
-	    hub pull-request -m \"$1\" -h `git rev-parse --abbrev-ref HEAD` -b master -l \"MASTER\"; \
-	    hub pull-request -m \"$1\" -h `git rev-parse --abbrev-ref HEAD` -b staging -l \"STAGING\"; \
-	    }; f"
+	pro = pull --rebase origin main
 
 [push]
 	default = current
