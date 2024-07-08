@@ -3,6 +3,7 @@
 ```
 brew install pgcli
 brew cask install quicklook-json
+defaults write -g ApplePressAndHoldEnabled -bool false
 ```
 
 
