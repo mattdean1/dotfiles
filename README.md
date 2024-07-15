@@ -11,8 +11,9 @@ brew install --cask iterm2
 (apply brew suggestions to add to path)
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-brew install pgcli
+brew install pgcli 
 brew install --cask quicklook-json
+brew install diff-so-fancy
 
 ```
 
